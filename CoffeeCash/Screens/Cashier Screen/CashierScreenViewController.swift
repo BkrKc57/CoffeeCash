@@ -36,6 +36,7 @@ class CashierScreenViewController: UIViewController {
     @IBOutlet weak var formStackViewVerticalConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var sendPaymentButton: UIButton!
     
     // MARK: -- Variables
     let amountOptions: [AmountOptions] = [.first, .second, .third, .fourth]
@@ -81,11 +82,14 @@ class CashierScreenViewController: UIViewController {
             let dataType: DataType = textComponents[1] == DataType.amount.key ? DataType.amount : DataType.text
             if dataType == .text {
                 self.formStackView.isHidden = true
+                self.sendPaymentButton.isHidden = true
                 self.resultLabel.isHidden = false
                 if textComponents.first == PaymentType.cancel.title {
                     self.resultLabel.text = "Müşteri siparişi iptal etmiştir"
                 } else {
-                    self.resultLabel.text = "Müşteri ödeme yapmıştır. Ödeme Bilgisi: \(textComponents.first)"
+                    if let text2 = textComponents.first {
+                        self.resultLabel.text = "Müşteri ödeme yapmıştır. Ödeme Bilgisi: \(text2)"
+                    }
                 }
             }
         }
@@ -112,9 +116,8 @@ class CashierScreenViewController: UIViewController {
     
     // MARK: -- Actions
     
-    
-    @IBAction func backButtonAction(_ sender: UIButton) {
-        self.back()
+    @IBAction func createNewVoucherButtonAction(_ sender: UIButton) {
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func sendButtonAction(_ sender: UIButton) {

@@ -22,8 +22,7 @@ class MainScreenViewController: UIViewController {
     }
     
     @IBAction func cashierButtonAction(_ sender: UIButton) {
-//        self.push(screen: .scanner)
         ApplicationData.shared.userType = .cashier
-        self.push(screen: .scanner)
+        self.presentInNav(screen: .scanner)
     }
 }

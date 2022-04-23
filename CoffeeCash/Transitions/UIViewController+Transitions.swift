@@ -15,4 +15,11 @@ extension UIViewController {
         let vc = screen.vc
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func presentInNav(screen: StoryBoard) {
+        let vc = screen.vc
+        let navContoller: UINavigationController = UINavigationController(rootViewController: vc)
+        navContoller.isNavigationBarHidden = true
+        self.present(navContoller, animated: true, completion: nil)
+    }
 }
