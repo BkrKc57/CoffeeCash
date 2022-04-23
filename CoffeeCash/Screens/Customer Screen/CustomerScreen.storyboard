@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Customer Screen View Controller-->
+        <scene sceneID="7g1-Hh-YdF">
+            <objects>
+                <viewController storyboardIdentifier="CustomerScreenViewController" id="V2z-Xy-8yI" customClass="CustomerScreenViewController" customModule="CoffeeCash" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1kF-Q0-Ubk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fla-yh-01p">
+                                <rect key="frame" x="16" y="76" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="FQI-Vj-Kt8"/>
+                                    <constraint firstAttribute="height" constant="40" id="hgP-2m-vWo"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="V2z-Xy-8yI" eventType="touchUpInside" id="8Nf-wx-ma3"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kRA-lO-0ZI">
+                                <rect key="frame" x="82" y="323" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="8w1-IM-fsz"/>
+                                    <constraint firstAttribute="width" secondItem="kRA-lO-0ZI" secondAttribute="height" multiplier="1:1" id="Cnf-Z4-weZ"/>
+                                    <constraint firstAttribute="height" constant="250" id="zSH-JQ-nZn"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JIr-o3-0ng">
+                                <rect key="frame" x="32" y="261" width="350" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ödeme Durumu:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PoK-Fj-9yf">
+                                        <rect key="frame" x="0.0" y="0.0" width="171" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ödenmedi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXl-h3-x6o">
+                                        <rect key="frame" x="179" y="0.0" width="171" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemPinkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jLS-7G-prg"/>
+                                </constraints>
+                            </stackView>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9It-Eq-9OQ">
+                                <rect key="frame" x="82" y="323" width="250" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ödeme Tutarı: 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORL-nv-dt0">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="62.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8D-kY-3t0">
+                                        <rect key="frame" x="0.0" y="62.5" width="250" height="62.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="Kredi Kartı ile Öde"/>
+                                        <connections>
+                                            <action selector="payWithCreditCardAction:" destination="V2z-Xy-8yI" eventType="touchUpInside" id="hzZ-xT-xOu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3i-0x-KPY">
+                                        <rect key="frame" x="0.0" y="125" width="250" height="62.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="Nakit Öde"/>
+                                        <connections>
+                                            <action selector="payCashAction:" destination="V2z-Xy-8yI" eventType="touchUpInside" id="Nmv-kt-GNV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pc0-0s-vu9">
+                                        <rect key="frame" x="0.0" y="187.5" width="250" height="62.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="İptal Et"/>
+                                        <connections>
+                                            <action selector="cancelOrderAction:" destination="V2z-Xy-8yI" eventType="touchUpInside" id="vyx-Wn-acI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="I62-Rl-eyT"/>
+                                    <constraint firstAttribute="height" constant="250" id="KB8-Ej-9dt"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNu-ri-FKO">
+                                <rect key="frame" x="132" y="613" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="JDJ-yX-t3Z"/>
+                                    <constraint firstAttribute="height" constant="40" id="fnJ-EN-eST"/>
+                                </constraints>
+                                <state key="normal" title="Crash Report"/>
+                                <connections>
+                                    <action selector="crashReportAction:" destination="V2z-Xy-8yI" eventType="touchUpInside" id="VIi-5y-wrs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9zi-uy-dtL"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fla-yh-01p" firstAttribute="leading" secondItem="9zi-uy-dtL" secondAttribute="leading" constant="16" id="0dI-Bz-4pz"/>
+                            <constraint firstItem="TNu-ri-FKO" firstAttribute="top" secondItem="kRA-lO-0ZI" secondAttribute="bottom" constant="40" id="3pz-Yc-dZO"/>
+                            <constraint firstItem="kRA-lO-0ZI" firstAttribute="top" secondItem="JIr-o3-0ng" secondAttribute="bottom" constant="32" id="8U3-pm-bSm"/>
+                            <constraint firstItem="TNu-ri-FKO" firstAttribute="centerX" secondItem="1kF-Q0-Ubk" secondAttribute="centerX" id="BqQ-vN-OQy"/>
+                            <constraint firstItem="9zi-uy-dtL" firstAttribute="trailing" secondItem="JIr-o3-0ng" secondAttribute="trailing" constant="32" id="G5b-JX-4Wc"/>
+                            <constraint firstItem="9It-Eq-9OQ" firstAttribute="centerY" secondItem="1kF-Q0-Ubk" secondAttribute="centerY" id="PCR-Du-6lW"/>
+                            <constraint firstItem="kRA-lO-0ZI" firstAttribute="centerY" secondItem="1kF-Q0-Ubk" secondAttribute="centerY" id="Xkh-aP-ZSh"/>
+                            <constraint firstItem="kRA-lO-0ZI" firstAttribute="centerX" secondItem="1kF-Q0-Ubk" secondAttribute="centerX" id="XwY-3i-B2g"/>
+                            <constraint firstItem="fla-yh-01p" firstAttribute="top" secondItem="9zi-uy-dtL" secondAttribute="top" constant="32" id="aVf-p0-rcw"/>
+                            <constraint firstItem="9It-Eq-9OQ" firstAttribute="centerX" secondItem="1kF-Q0-Ubk" secondAttribute="centerX" id="qZB-Jw-gM5"/>
+                            <constraint firstItem="JIr-o3-0ng" firstAttribute="leading" secondItem="9zi-uy-dtL" secondAttribute="leading" constant="32" id="uYY-sR-f58"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="formStackView" destination="9It-Eq-9OQ" id="gXO-bg-FbJ"/>
+                        <outlet property="formTitleLabel" destination="ORL-nv-dt0" id="kCQ-Cx-Gmu"/>
+                        <outlet property="payStateLabel" destination="mXl-h3-x6o" id="5gd-HV-EDi"/>
+                        <outlet property="qrCodeImageView" destination="kRA-lO-0ZI" id="N2T-RF-rc9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TSt-xH-v8t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13" y="89"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="100" height="100"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

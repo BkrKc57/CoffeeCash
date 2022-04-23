@@ -1,0 +1,6 @@
+framework module Pods_CoffeeCash {
+  umbrella header "Pods-CoffeeCash-umbrella.h"
+
+  export *
+  module * { export * }
+}

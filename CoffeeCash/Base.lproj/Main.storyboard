@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vvv-It-LOG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash Screen View Controller-->
+        <scene sceneID="Soa-mp-WgM">
+            <objects>
+                <viewController storyboardIdentifier="SplashScreenViewController" id="s05-t7-csc" customClass="SplashScreenViewController" customModule="MeTechApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cjU-V1-v5w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee2" translatesAutoresizingMaskIntoConstraints="NO" id="74K-Xw-fEl">
+                                <rect key="frame" x="0.0" y="241" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="74K-Xw-fEl" secondAttribute="height" multiplier="1:1" id="Hz2-RF-3fn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sUc-Nd-93w"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="74K-Xw-fEl" firstAttribute="leading" secondItem="sUc-Nd-93w" secondAttribute="leading" id="A5x-JQ-em5"/>
+                            <constraint firstItem="74K-Xw-fEl" firstAttribute="centerY" secondItem="cjU-V1-v5w" secondAttribute="centerY" id="Twz-oa-oXn"/>
+                            <constraint firstItem="sUc-Nd-93w" firstAttribute="trailing" secondItem="74K-Xw-fEl" secondAttribute="trailing" id="mgZ-Yd-IQr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oUW-4b-omb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CGd-XW-grv" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1807.2463768115942" y="88.392857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mS6-9M-qXN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Vvv-It-LOG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MWu-jg-MLr">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="s05-t7-csc" kind="relationship" relationship="rootViewController" id="CCX-hp-gdK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pa6-Bz-drh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="897.10144927536237" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="coffee2" width="625" height="399"/>
+    </resources>
+</document>
